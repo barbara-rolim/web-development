@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Float Example</title>
+  <style>
+    .container {
+      background: #eee;
+      padding: 10px;
+    }
+
+    .caixa-esquerda {
+      float: left;
+      width: 45%;
+      background: lightcoral;
+      padding: 10px;
+    }
+
+    .caixa-e {
+        float: left;
+        background-color: aquamarine;
+        width: 45%;
+        padding: 10px;
+    }
+
+    .caixa-direita {
+      float: right;
+      width: 45%;
+      background: lightblue;
+      padding: 10px;
+    }
+
+    .caixa-d {
+        float: right;
+        background-color:blueviolet;
+        width: 45%;
+        padding: 10px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container clearfix">
+    <div class="caixa-esquerda">Caixa à esquerda</div>
+    <div class="caixa-direita">Caixa à direita</div>
+    <div class="caixa-e">Caixa esquerda outra vez</div>
+    <div class="caixa-d">Caixa direitra outra vez</div>
+  </div>
+
+</body>
+</html>
