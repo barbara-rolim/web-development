@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Sizing</title>
+    <style>
+        .container{
+            display: flex;
+            gap:10px;
+            padding: 20px;
+            background-color: #eee;
+            margin-top: 20px;
+        }
+
+        .item {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 200px;
+            min-width: 100px;
+            max-width: 300px;
+            padding: 10px;
+            background-color: #add8e6;
+            text-align: center;
+        }
+
+        .resizable{
+            resize: horizontal;
+            overflow: auto;
+            border: 2px dashed #444;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .grow {
+            flex-grow: 1;
+            background-color: #4caf50;
+        }
+
+        .shrink{
+            flex-shrink: 1;
+            background-color: #f44336;
+        }
+
+        .no-grow {
+            flex-grow: 0;
+            background-color: #2196f3;
+        }
+
+        .no-shrink {
+            flex-shrink: 0;
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exemplo de Flexbox com flex-basis, min-width e max-width</h2>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <div class="resizable">
+        <p>Redimensionar área (Ajustes dos itens flex)</p>
+    </div>
+
+    <div class="container">
+        <div class="item grow">grow: 1</div>
+        <div class="item no-grow">grow: 0</div>
+    </div>
+
+    <div class="container">
+        <div class="item shrink">shrink: 1</div>
+        <div class="item no-shrink">shrink: 0</div>
+    </div>
+</body>
+</html>
